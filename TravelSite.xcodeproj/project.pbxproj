@@ -14,6 +14,7 @@
 		015E321423F8432F00D4647A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015E321323F8432F00D4647A /* Assets.xcassets */; };
 		015E321723F8432F00D4647A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015E321523F8432F00D4647A /* LaunchScreen.storyboard */; };
 		015E322223F8432F00D4647A /* TravelSiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E322123F8432F00D4647A /* TravelSiteTests.swift */; };
+		015E322D23F843F200D4647A /* NetworkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E322C23F843F200D4647A /* NetworkInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		015E321D23F8432F00D4647A /* TravelSiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelSiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		015E322123F8432F00D4647A /* TravelSiteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelSiteTests.swift; sourceTree = "<group>"; };
 		015E322323F8432F00D4647A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		015E322C23F843F200D4647A /* NetworkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				015E320A23F8432B00D4647A /* AppDelegate.swift */,
 				015E320C23F8432B00D4647A /* SceneDelegate.swift */,
 				015E320E23F8432B00D4647A /* ViewController.swift */,
+				015E322C23F843F200D4647A /* NetworkInteractor.swift */,
 				015E321023F8432B00D4647A /* Main.storyboard */,
 				015E321323F8432F00D4647A /* Assets.xcassets */,
 				015E321523F8432F00D4647A /* LaunchScreen.storyboard */,
@@ -203,6 +206,7 @@
 				015E320F23F8432B00D4647A /* ViewController.swift in Sources */,
 				015E320B23F8432B00D4647A /* AppDelegate.swift in Sources */,
 				015E320D23F8432B00D4647A /* SceneDelegate.swift in Sources */,
+				015E322D23F843F200D4647A /* NetworkInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

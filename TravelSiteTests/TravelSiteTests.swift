@@ -10,18 +10,27 @@ import XCTest
 @testable import TravelSite
 
 class TravelSiteTests: XCTestCase {
-
+    
+    var networkInteractor: NetworkInteractor!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        networkInteractor = NetworkInteractor()
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testFetchSite() {
+        let expectation = XCTestExpectation(description: "Download apple.com home page")
+
+        networkInteractor.fetchSites(completion: { response in
+            
+            expectation.fulfill()
+        }, error: { error in
+            expectation.fulfill()
+        })
+        wait(for: [expectation], timeout: 10.0)
+
     }
 
     func testPerformanceExample() {
