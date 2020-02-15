@@ -15,6 +15,7 @@
 		015E321723F8432F00D4647A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015E321523F8432F00D4647A /* LaunchScreen.storyboard */; };
 		015E322223F8432F00D4647A /* TravelSiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E322123F8432F00D4647A /* TravelSiteTests.swift */; };
 		015E322D23F843F200D4647A /* NetworkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E322C23F843F200D4647A /* NetworkInteractor.swift */; };
+		015E323223F84A3700D4647A /* NetworkEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E323123F84A3700D4647A /* NetworkEntities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		015E322123F8432F00D4647A /* TravelSiteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelSiteTests.swift; sourceTree = "<group>"; };
 		015E322323F8432F00D4647A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		015E322C23F843F200D4647A /* NetworkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInteractor.swift; sourceTree = "<group>"; };
+		015E323123F84A3700D4647A /* NetworkEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEntities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +83,12 @@
 		015E320923F8432B00D4647A /* TravelSite */ = {
 			isa = PBXGroup;
 			children = (
-				015E320A23F8432B00D4647A /* AppDelegate.swift */,
-				015E320C23F8432B00D4647A /* SceneDelegate.swift */,
-				015E320E23F8432B00D4647A /* ViewController.swift */,
-				015E322C23F843F200D4647A /* NetworkInteractor.swift */,
-				015E321023F8432B00D4647A /* Main.storyboard */,
+				015E323423F84A6200D4647A /* AppDelegate */,
+				015E323523F84A7300D4647A /* View */,
+				015E323323F84A5600D4647A /* ViewController */,
+				015E323623F84A8400D4647A /* Presenter */,
+				015E322E23F84A0C00D4647A /* Interactor */,
+				015E323023F84A2500D4647A /* Entity */,
 				015E321323F8432F00D4647A /* Assets.xcassets */,
 				015E321523F8432F00D4647A /* LaunchScreen.storyboard */,
 				015E321823F8432F00D4647A /* Info.plist */,
@@ -100,6 +103,62 @@
 				015E322323F8432F00D4647A /* Info.plist */,
 			);
 			path = TravelSiteTests;
+			sourceTree = "<group>";
+		};
+		015E322E23F84A0C00D4647A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				015E322C23F843F200D4647A /* NetworkInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		015E323023F84A2500D4647A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				015E323123F84A3700D4647A /* NetworkEntities.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		015E323323F84A5600D4647A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				015E320E23F8432B00D4647A /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		015E323423F84A6200D4647A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				015E320A23F8432B00D4647A /* AppDelegate.swift */,
+				015E320C23F8432B00D4647A /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		015E323523F84A7300D4647A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				015E323723F84A8F00D4647A /* InterfaceBuilder */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		015E323623F84A8400D4647A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		015E323723F84A8F00D4647A /* InterfaceBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				015E321023F8432B00D4647A /* Main.storyboard */,
+			);
+			path = InterfaceBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +264,7 @@
 			files = (
 				015E320F23F8432B00D4647A /* ViewController.swift in Sources */,
 				015E320B23F8432B00D4647A /* AppDelegate.swift in Sources */,
+				015E323223F84A3700D4647A /* NetworkEntities.swift in Sources */,
 				015E320D23F8432B00D4647A /* SceneDelegate.swift in Sources */,
 				015E322D23F843F200D4647A /* NetworkInteractor.swift in Sources */,
 			);
