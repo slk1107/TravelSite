@@ -13,14 +13,14 @@ class SiteListTableCell: UITableViewCell {
     @IBOutlet weak var siteTitleLabel: UILabel!
     @IBOutlet weak var siteDescriptionLabel: UILabel!
     @IBOutlet weak var siteImagesCollecitonView: UICollectionView!
-    var imageURLs = [URL]()
+    var imageURLs = [URL]() {
+        didSet {
+            siteImagesCollecitonView.reloadData()
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-    
-    override func prepareForReuse() {
-        imageURLs.removeAll()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,6 +37,7 @@ extension SiteListTableCell: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SiteListImagesCollectionViewCell", for: indexPath) as! SiteListImagesCollectionViewCell
+        
         cell.thumbnail.kf.setImage(with: imageURLs[indexPath.row], options: [.keepCurrentImageWhileLoading])
         
         return cell
