@@ -29,6 +29,8 @@ class SiteListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 600
     }
 
     // MARK: - Table view data source
@@ -47,6 +49,7 @@ class SiteListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SiteListTableCell", for: indexPath) as! SiteListTableCell
         let siteInfo = presenter.siteList[indexPath.row]
         cell.siteTitleLabel.text = siteInfo.stitle
+        cell.siteDescriptionLabel.text = siteInfo.xbody
         return cell
     }
 

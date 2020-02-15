@@ -11,7 +11,7 @@ import UIKit
 class SiteListTableCell: UITableViewCell {
 
     @IBOutlet weak var siteTitleLabel: UILabel!
-    @IBOutlet weak var siteDescriptionTextView: UITextView!
+    @IBOutlet weak var siteDescriptionLabel: UILabel!
     @IBOutlet weak var siteImagesCollecitonView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
