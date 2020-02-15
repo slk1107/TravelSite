@@ -9,7 +9,7 @@
 import UIKit
 
 
-protocol SiteListTableViewUseCase {
+protocol SiteListTableViewUseCase: NSObjectProtocol {
     var presenter: SiteListPresenter! {get set}
     func reloadTableView()
 }

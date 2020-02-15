@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SiteListPresenterProtocol {
-    weak var viewController: SiteListTableViewUseCase! {get set}
+    var viewController: SiteListTableViewUseCase! {get set}
     func viewDidLoad()
     func numberOfSections() -> Int
     func numberOfRowsInSection(section: Int) -> Int
