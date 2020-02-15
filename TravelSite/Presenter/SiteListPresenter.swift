@@ -25,10 +25,7 @@ class SiteListPresenter: SiteListPresenterProtocol {
     func viewDidLoad() {
         networkInteractor.fetchSites(completion: {
             [weak self] response in
-            if let results = response?.result.results {
-                self?.siteList.append(contentsOf: results)
-                self?.viewController.reloadTableView()
-            }
+            self?.handleFetchCallback(response: response)
         })
         
     }
@@ -41,5 +38,22 @@ class SiteListPresenter: SiteListPresenterProtocol {
         return siteList.count
     }
     
-    
+    func willDisplay(index: Int) {
+        let currentItemCount = siteList.count
+        if currentItemCount - index < 3 {
+            networkInteractor.fetchSites(from: siteList.count, completion: {
+                [weak self] response in
+                self?.handleFetchCallback(response: response)
+            })
+        }
+    }
+}
+
+extension SiteListPresenter {
+    private func handleFetchCallback(response: SiteResponse?) {
+        if let results = response?.result.results {
+            siteList.append(contentsOf: results)
+            viewController.reloadTableView()
+        }
+    }
 }

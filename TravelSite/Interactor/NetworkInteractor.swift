@@ -9,13 +9,13 @@
 import Foundation
 
 class NetworkInteractor {
-    func fetchSites(completion: @escaping (SiteResponse?) -> (), error: ((Error) -> ())? = nil) {
+    func fetchSites(from index: Int = 0, completion: @escaping (SiteResponse?) -> (), error: ((Error) -> ())? = nil) {
 
         let urlComponents = NSURLComponents(string: "https://data.taipei/opendata/datalist/apiAccess")!
         urlComponents.queryItems = [
             URLQueryItem(name: "scope", value: "resourceAquire"),
             URLQueryItem(name: "rid", value: "36847f3f-deff-4183-a5bb-800737591de5"),
-            URLQueryItem(name: "offset", value: "10"),
+            URLQueryItem(name: "offset", value: String(index)),
             URLQueryItem(name: "limit", value: "10"),
         ]
         
