@@ -9,18 +9,16 @@
 import Foundation
 struct SiteResponse: Codable {
     var result: DatalistResponse
-    
-    struct DatalistResponse: Codable {
-        var limit: Int
-        var offset: Int
-        var count: Int
-        var results: [SiteInfo]
-        
-        struct SiteInfo: Codable {
-            var info: String
-            var stitle: String
-            var file: String
-            var xbody: String
-        }
-    }
+}
+struct DatalistResponse: Codable {
+    var limit: Int
+    var offset: Int
+    var count: Int
+    var results: [SiteInfo]
+}
+struct SiteInfo: Codable {
+    var info: String
+    var stitle: String
+    var file: String
+    var xbody: String
 }
