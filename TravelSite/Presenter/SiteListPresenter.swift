@@ -9,15 +9,16 @@
 import Foundation
 
 protocol SiteListPresenterProtocol {
-    var viewController: SiteListTableViewUseCase! {get set}
+    weak var viewController: SiteListTableViewUseCase! {get set}
     func viewDidLoad()
     func numberOfSections() -> Int
     func numberOfRowsInSection(section: Int) -> Int
+    func willDisplay(index: Int)
 }
 
 class SiteListPresenter: SiteListPresenterProtocol {
     var siteList = [SiteInfo]()
-    var viewController: SiteListTableViewUseCase!
+    weak var viewController: SiteListTableViewUseCase!
     var networkInteractor: NetworkInteractor!
     
     
