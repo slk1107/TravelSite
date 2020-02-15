@@ -21,7 +21,7 @@ class TravelSiteTests: XCTestCase {
     }
 
     func testFetchSite() {
-        let expectation = XCTestExpectation(description: "Download apple.com home page")
+        let expectation = XCTestExpectation(description: "NetworkInteractor fetchSites")
 
         networkInteractor.fetchSites(completion: { response in
             print(response)
