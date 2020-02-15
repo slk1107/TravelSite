@@ -10,5 +10,7 @@ import UIKit
 
 class SiteListImagesCollectionViewCell: UICollectionViewCell {
     @IBOutlet var thumbnail: UIImageView!
-    
+    override func awakeFromNib() {
+        thumbnail.contentMode = .scaleAspectFit
+    }
 }

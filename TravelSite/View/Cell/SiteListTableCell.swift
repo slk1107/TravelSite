@@ -37,15 +37,8 @@ extension SiteListTableCell: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SiteListImagesCollectionViewCell", for: indexPath) as! SiteListImagesCollectionViewCell
-        cell.thumbnail.kf.setImage(with: imageURLs[indexPath.row], options: [.keepCurrentImageWhileLoading], completionHandler: {
-            result in
-            switch result {
-            case .success(let value):
-                print("Task done for: \(value.source.url?.absoluteString ?? "")")
-            case .failure(let error):
-                print("Job failed: \(error.localizedDescription)")
-            }
-        })
+        cell.thumbnail.kf.setImage(with: imageURLs[indexPath.row], options: [.keepCurrentImageWhileLoading])
+        
         return cell
     }
 }
