@@ -12,6 +12,7 @@ import UIKit
 protocol SiteListTableViewUseCase: NSObjectProtocol {
     var presenter: SiteListPresenter! {get set}
     func reloadTableView()
+    func showAlertDialog(title: String, message: String)
 }
 
 extension SiteListTableViewController: SiteListTableViewUseCase {
@@ -20,6 +21,15 @@ extension SiteListTableViewController: SiteListTableViewUseCase {
             self?.tableView.reloadData()
         }
         
+    }
+    
+    func showAlertDialog(title: String, message: String) {
+        DispatchQueue.main.async {[weak self] in
+            
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self?.present(alert, animated: true, completion: nil)
+        }
     }
 }
 

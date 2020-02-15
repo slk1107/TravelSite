@@ -21,13 +21,8 @@ class SiteListPresenter: SiteListPresenterProtocol {
     weak var viewController: SiteListTableViewUseCase!
     var networkInteractor: NetworkInteractor!
     
-    
     func viewDidLoad() {
-        networkInteractor.fetchSites(completion: {
-            [weak self] response in
-            self?.handleFetchCallback(response: response)
-        })
-        
+        fetchSites(from: 0)
     }
     
     func numberOfSections() -> Int {
@@ -41,19 +36,29 @@ class SiteListPresenter: SiteListPresenterProtocol {
     func willDisplay(index: Int) {
         let currentItemCount = siteList.count
         if currentItemCount - index < 3 {
-            networkInteractor.fetchSites(from: siteList.count, completion: {
-                [weak self] response in
-                self?.handleFetchCallback(response: response)
-            })
+            fetchSites(from: siteList.count)
         }
     }
 }
 
 extension SiteListPresenter {
+    private func fetchSites(from index: Int) {
+        networkInteractor.fetchSites(from: siteList.count, completion: {
+            [weak self] response in
+                self?.handleFetchCallback(response: response)
+            }, error: { [weak self] error in
+                self?.handleFetchFailed(error: error)
+        })
+    }
+    
     private func handleFetchCallback(response: SiteResponse?) {
         if let results = response?.result.results {
             siteList.append(contentsOf: results)
             viewController.reloadTableView()
         }
+    }
+    
+    private func handleFetchFailed(error: Error) {
+        self.viewController.showAlertDialog(title: "Fetch Fail", message: error.localizedDescription)
     }
 }
