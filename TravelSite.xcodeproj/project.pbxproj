@@ -19,6 +19,11 @@
 		015E323D23F84D3200D4647A /* SiteListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E323C23F84D3200D4647A /* SiteListTableCell.swift */; };
 		015E323F23F84F5D00D4647A /* SiteListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E323E23F84F5D00D4647A /* SiteListPresenter.swift */; };
 		015E324223F8546400D4647A /* TravelRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E324123F8546400D4647A /* TravelRouter.swift */; };
+		015E324723F860D600D4647A /* SiteListImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E324623F860D600D4647A /* SiteListImagesCollectionViewCell.swift */; };
+		015E324923F8626200D4647A /* KingFisherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E324823F8626200D4647A /* KingFisherTest.swift */; };
+		015E32B823F868C800D4647A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015E32B623F868C800D4647A /* Kingfisher.framework */; };
+		015E32B923F8693C00D4647A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015E32B623F868C800D4647A /* Kingfisher.framework */; };
+		015E32BA23F8693C00D4647A /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 015E32B623F868C800D4647A /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +35,20 @@
 			remoteInfo = TravelSite;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		015E326523F8666800D4647A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				015E32BA23F8693C00D4647A /* Kingfisher.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		015E320723F8432B00D4647A /* TravelSite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelSite.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +67,9 @@
 		015E323C23F84D3200D4647A /* SiteListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteListTableCell.swift; sourceTree = "<group>"; };
 		015E323E23F84F5D00D4647A /* SiteListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteListPresenter.swift; sourceTree = "<group>"; };
 		015E324123F8546400D4647A /* TravelRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRouter.swift; sourceTree = "<group>"; };
+		015E324623F860D600D4647A /* SiteListImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteListImagesCollectionViewCell.swift; sourceTree = "<group>"; };
+		015E324823F8626200D4647A /* KingFisherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisherTest.swift; sourceTree = "<group>"; };
+		015E32B623F868C800D4647A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015E32B923F8693C00D4647A /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015E32B823F868C800D4647A /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,9 +95,11 @@
 		015E31FE23F8432B00D4647A = {
 			isa = PBXGroup;
 			children = (
+				015E324323F8601800D4647A /* 3rdParty */,
 				015E320923F8432B00D4647A /* TravelSite */,
 				015E322023F8432F00D4647A /* TravelSiteTests */,
 				015E320823F8432B00D4647A /* Products */,
+				015E325223F863E800D4647A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				015E322123F8432F00D4647A /* TravelSiteTests.swift */,
+				015E324823F8626200D4647A /* KingFisherTest.swift */,
 				015E322323F8432F00D4647A /* Info.plist */,
 			);
 			path = TravelSiteTests;
@@ -174,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				015E323C23F84D3200D4647A /* SiteListTableCell.swift */,
+				015E324623F860D600D4647A /* SiteListImagesCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -186,6 +214,37 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		015E324323F8601800D4647A /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				015E326F23F866D500D4647A /* Simulator */,
+				015E326E23F866CC00D4647A /* Device */,
+			);
+			path = 3rdParty;
+			sourceTree = "<group>";
+		};
+		015E325223F863E800D4647A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		015E326E23F866CC00D4647A /* Device */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		015E326F23F866D500D4647A /* Simulator */ = {
+			isa = PBXGroup;
+			children = (
+				015E32B623F868C800D4647A /* Kingfisher.framework */,
+			);
+			path = Simulator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,6 +255,7 @@
 				015E320323F8432B00D4647A /* Sources */,
 				015E320423F8432B00D4647A /* Frameworks */,
 				015E320523F8432B00D4647A /* Resources */,
+				015E326523F8666800D4647A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -291,6 +351,7 @@
 				015E323F23F84F5D00D4647A /* SiteListPresenter.swift in Sources */,
 				015E323223F84A3700D4647A /* NetworkEntities.swift in Sources */,
 				015E320D23F8432B00D4647A /* SceneDelegate.swift in Sources */,
+				015E324723F860D600D4647A /* SiteListImagesCollectionViewCell.swift in Sources */,
 				015E324223F8546400D4647A /* TravelRouter.swift in Sources */,
 				015E323D23F84D3200D4647A /* SiteListTableCell.swift in Sources */,
 				015E323A23F84C4400D4647A /* SiteListTableViewController.swift in Sources */,
@@ -303,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				015E322223F8432F00D4647A /* TravelSiteTests.swift in Sources */,
+				015E324923F8626200D4647A /* KingFisherTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +518,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Z23YJK7V9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3rdParty",
+					"$(PROJECT_DIR)/3rdParty/Simulator",
+				);
 				INFOPLIST_FILE = TravelSite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -474,6 +541,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Z23YJK7V9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3rdParty",
+					"$(PROJECT_DIR)/3rdParty/Simulator",
+				);
 				INFOPLIST_FILE = TravelSite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -493,6 +565,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Z23YJK7V9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3rdParty",
+					"$(PROJECT_DIR)/3rdParty/Simulator",
+				);
 				INFOPLIST_FILE = TravelSiteTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -515,6 +592,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Z23YJK7V9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3rdParty",
+					"$(PROJECT_DIR)/3rdParty/Simulator",
+				);
 				INFOPLIST_FILE = TravelSiteTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
