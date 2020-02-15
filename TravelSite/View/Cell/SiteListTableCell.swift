@@ -7,15 +7,20 @@
 //
 
 import UIKit
-
+import Kingfisher
 class SiteListTableCell: UITableViewCell {
 
     @IBOutlet weak var siteTitleLabel: UILabel!
     @IBOutlet weak var siteDescriptionLabel: UILabel!
     @IBOutlet weak var siteImagesCollecitonView: UICollectionView!
+    var imageURLs = [URL]()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    override func prepareForReuse() {
+        imageURLs.removeAll()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,7 +28,24 @@ class SiteListTableCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    
+}
 
+extension SiteListTableCell: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return imageURLs.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SiteListImagesCollectionViewCell", for: indexPath) as! SiteListImagesCollectionViewCell
+        cell.thumbnail.kf.setImage(with: imageURLs[indexPath.row], options: [.keepCurrentImageWhileLoading], completionHandler: {
+            result in
+            switch result {
+            case .success(let value):
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+            case .failure(let error):
+                print("Job failed: \(error.localizedDescription)")
+            }
+        })
+        return cell
+    }
 }

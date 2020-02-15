@@ -50,6 +50,9 @@ class SiteListTableViewController: UITableViewController {
         let siteInfo = presenter.siteList[indexPath.row]
         cell.siteTitleLabel.text = siteInfo.stitle
         cell.siteDescriptionLabel.text = siteInfo.xbody
+        let imageURLS = siteInfo.fileURLs.filter({$0 != nil}) as! [URL]
+        cell.imageURLs.append(contentsOf: imageURLS)
+        
         return cell
     }
 

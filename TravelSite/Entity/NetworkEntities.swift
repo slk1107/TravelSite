@@ -21,4 +21,14 @@ struct SiteInfo: Codable {
     var stitle: String
     var file: String
     var xbody: String
+    enum CodingKeys: String, CodingKey {
+        case info
+        case stitle
+        case file
+        case xbody
+    }
+    
+    var fileURLs: [URL?] {
+        return file.components(separatedBy: "http://").map({URL(string: $0)?.toHttps()})
+    }
 }
