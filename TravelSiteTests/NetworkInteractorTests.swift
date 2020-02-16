@@ -9,7 +9,7 @@
 import XCTest
 @testable import TravelSite
 
-class TravelSiteTests: XCTestCase {
+class NetworkInteractorTests: XCTestCase {
     
     var networkInteractor: NetworkInteractor!
     

@@ -12,7 +12,7 @@
 		015E321223F8432B00D4647A /* SiteList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015E321023F8432B00D4647A /* SiteList.storyboard */; };
 		015E321423F8432F00D4647A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015E321323F8432F00D4647A /* Assets.xcassets */; };
 		015E321723F8432F00D4647A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015E321523F8432F00D4647A /* LaunchScreen.storyboard */; };
-		015E322223F8432F00D4647A /* TravelSiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E322123F8432F00D4647A /* TravelSiteTests.swift */; };
+		015E322223F8432F00D4647A /* NetworkInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E322123F8432F00D4647A /* NetworkInteractorTests.swift */; };
 		015E322D23F843F200D4647A /* NetworkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E322C23F843F200D4647A /* NetworkInteractor.swift */; };
 		015E323223F84A3700D4647A /* NetworkEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E323123F84A3700D4647A /* NetworkEntities.swift */; };
 		015E323A23F84C4400D4647A /* SiteListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E323923F84C4400D4647A /* SiteListTableViewController.swift */; };
@@ -61,7 +61,7 @@
 		015E321623F8432F00D4647A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		015E321823F8432F00D4647A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		015E321D23F8432F00D4647A /* TravelSiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelSiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		015E322123F8432F00D4647A /* TravelSiteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelSiteTests.swift; sourceTree = "<group>"; };
+		015E322123F8432F00D4647A /* NetworkInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInteractorTests.swift; sourceTree = "<group>"; };
 		015E322323F8432F00D4647A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		015E322C23F843F200D4647A /* NetworkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInteractor.swift; sourceTree = "<group>"; };
 		015E323123F84A3700D4647A /* NetworkEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEntities.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		015E322023F8432F00D4647A /* TravelSiteTests */ = {
 			isa = PBXGroup;
 			children = (
-				015E322123F8432F00D4647A /* TravelSiteTests.swift */,
+				015E322123F8432F00D4647A /* NetworkInteractorTests.swift */,
 				015E324823F8626200D4647A /* KingFisherTest.swift */,
 				015E322323F8432F00D4647A /* Info.plist */,
 			);
@@ -378,7 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				015E322223F8432F00D4647A /* TravelSiteTests.swift in Sources */,
+				015E322223F8432F00D4647A /* NetworkInteractorTests.swift in Sources */,
 				015E32BE23F87D3E00D4647A /* File.swift in Sources */,
 				015E324923F8626200D4647A /* KingFisherTest.swift in Sources */,
 			);
