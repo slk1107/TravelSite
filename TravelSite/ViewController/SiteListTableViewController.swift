@@ -58,11 +58,7 @@ class SiteListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SiteListTableCell", for: indexPath) as! SiteListTableCell
         let siteInfo = presenter.siteList[indexPath.row]
-        cell.siteTitleLabel.text = siteInfo.stitle
-        cell.siteDescriptionLabel.text = siteInfo.xbody
-        let imageURLs = siteInfo.fileURLs.filter({$0 != nil}) as! [URL]
-        cell.imageURLs = imageURLs
-        
+        cell.data = siteInfo
         return cell
     }
     

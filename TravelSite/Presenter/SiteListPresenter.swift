@@ -17,7 +17,7 @@ protocol SiteListPresenterProtocol {
 }
 
 class SiteListPresenter: SiteListPresenterProtocol {
-    var siteList = [SiteInfo]()
+    var siteList = [UISiteInfo]()
     weak var viewController: SiteListTableViewUseCase!
     var networkInteractor: NetworkInteractor!
     
@@ -52,7 +52,7 @@ extension SiteListPresenter {
     }
     
     private func handleFetchCallback(response: SiteResponse?) {
-        if let results = response?.result.results {
+        if let results = response?.result.results.map({UISiteInfo(serverInfo: $0)}) {
             siteList.append(contentsOf: results)
             viewController.reloadTableView()
         }

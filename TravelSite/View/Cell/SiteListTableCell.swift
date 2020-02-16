@@ -13,7 +13,13 @@ class SiteListTableCell: UITableViewCell {
     @IBOutlet weak var siteTitleLabel: UILabel!
     @IBOutlet weak var siteDescriptionLabel: UILabel!
     @IBOutlet weak var siteImagesCollecitonView: UICollectionView!
-    
+    var data: UISiteInfo! {
+        didSet {
+            siteTitleLabel.text = data.title
+            siteDescriptionLabel.text = data.description
+            imageURLs = data.imageURLs
+        }
+    }
     var imageURLs = [URL]() {
         didSet {
             siteImagesCollecitonView.reloadData()
