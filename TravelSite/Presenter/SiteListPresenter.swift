@@ -52,7 +52,8 @@ extension SiteListPresenter {
     }
     
     private func handleFetchCallback(response: SiteResponse?) {
-        if let results = response?.result.results.map({UISiteInfo(serverInfo: $0)}) {
+        if let results = response?.result.results.map({UISiteInfo(serverInfo: $0)}),
+            results.count > 0 {
             siteList.append(contentsOf: results)
             viewController.reloadTableView()
         }
