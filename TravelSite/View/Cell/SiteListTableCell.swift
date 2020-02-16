@@ -25,6 +25,9 @@ class SiteListTableCell: UITableViewCell {
             siteImagesCollecitonView.reloadData()
         }
     }
+    override func prepareForReuse() {
+        siteImagesCollecitonView.contentOffset = CGPoint.zero
+    }
 }
 
 extension SiteListTableCell: UICollectionViewDelegate, UICollectionViewDataSource {
