@@ -24,13 +24,14 @@ class TravelSiteTests: XCTestCase {
         let expectation = XCTestExpectation(description: "NetworkInteractor fetchSites")
 
         networkInteractor.fetchSites(completion: { response in
-            print(response)
+            print(response as Any)
+            assert(response != nil)
             expectation.fulfill()
         }, error: { error in
+            assert(false, "fetchSites faile: \(error.localizedDescription)")
             expectation.fulfill()
         })
         wait(for: [expectation], timeout: 10.0)
-
     }
 
     func testPerformanceExample() {
