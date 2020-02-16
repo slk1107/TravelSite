@@ -21,11 +21,10 @@
 		015E324223F8546400D4647A /* TravelRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E324123F8546400D4647A /* TravelRouter.swift */; };
 		015E324723F860D600D4647A /* SiteListImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E324623F860D600D4647A /* SiteListImagesCollectionViewCell.swift */; };
 		015E324923F8626200D4647A /* KingFisherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E324823F8626200D4647A /* KingFisherTest.swift */; };
-		015E32B823F868C800D4647A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015E32B623F868C800D4647A /* Kingfisher.framework */; };
-		015E32B923F8693C00D4647A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015E32B623F868C800D4647A /* Kingfisher.framework */; };
-		015E32BA23F8693C00D4647A /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 015E32B623F868C800D4647A /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		015E32BD23F87D3E00D4647A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E32BC23F87D3E00D4647A /* File.swift */; };
 		015E32BE23F87D3E00D4647A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E32BC23F87D3E00D4647A /* File.swift */; };
+		015E32C423F91F5300D4647A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015E32BF23F91D6E00D4647A /* Kingfisher.framework */; };
+		015E32C523F91F5300D4647A /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 015E32BF23F91D6E00D4647A /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		015E326523F8666800D4647A /* Embed Frameworks */ = {
+		015E32C623F91F5300D4647A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				015E32BA23F8693C00D4647A /* Kingfisher.framework in Embed Frameworks */,
+				015E32C523F91F5300D4647A /* Kingfisher.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,8 +70,8 @@
 		015E324123F8546400D4647A /* TravelRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRouter.swift; sourceTree = "<group>"; };
 		015E324623F860D600D4647A /* SiteListImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteListImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		015E324823F8626200D4647A /* KingFisherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisherTest.swift; sourceTree = "<group>"; };
-		015E32B623F868C800D4647A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
 		015E32BC23F87D3E00D4647A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		015E32BF23F91D6E00D4647A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				015E32B923F8693C00D4647A /* Kingfisher.framework in Frameworks */,
+				015E32C423F91F5300D4647A /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				015E32B823F868C800D4647A /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +242,7 @@
 		015E326F23F866D500D4647A /* Simulator */ = {
 			isa = PBXGroup;
 			children = (
-				015E32B623F868C800D4647A /* Kingfisher.framework */,
+				015E32BF23F91D6E00D4647A /* Kingfisher.framework */,
 			);
 			path = Simulator;
 			sourceTree = "<group>";
@@ -267,7 +265,7 @@
 				015E320323F8432B00D4647A /* Sources */,
 				015E320423F8432B00D4647A /* Frameworks */,
 				015E320523F8432B00D4647A /* Resources */,
-				015E326523F8666800D4647A /* Embed Frameworks */,
+				015E32C623F91F5300D4647A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -538,6 +536,7 @@
 					"$(PROJECT_DIR)/3rdParty/Simulator",
 				);
 				INFOPLIST_FILE = TravelSite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -561,6 +560,7 @@
 					"$(PROJECT_DIR)/3rdParty/Simulator",
 				);
 				INFOPLIST_FILE = TravelSite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
