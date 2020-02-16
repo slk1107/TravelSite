@@ -13,20 +13,11 @@ class SiteListTableCell: UITableViewCell {
     @IBOutlet weak var siteTitleLabel: UILabel!
     @IBOutlet weak var siteDescriptionLabel: UILabel!
     @IBOutlet weak var siteImagesCollecitonView: UICollectionView!
+    
     var imageURLs = [URL]() {
         didSet {
             siteImagesCollecitonView.reloadData()
         }
-    }
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 }
 
