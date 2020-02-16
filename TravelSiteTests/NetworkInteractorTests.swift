@@ -21,10 +21,22 @@ class NetworkInteractorTests: XCTestCase {
     }
 
     func testFetchSite() {
+        fetchSite()
+    }
+    
+    func testFetchSiteBoundary() {
+        fetchSite(index: -1)
+        fetchSite(index: 2000)
+    }
+    
+    func testFetchAll() {
+        fetchSite(index: 0, pageCount: 1000)
+    }
+    
+    private func fetchSite(index: Int = 0, pageCount: Int = 10) {
         let expectation = XCTestExpectation(description: "NetworkInteractor fetchSites")
 
-        networkInteractor.fetchSites(completion: { response in
-            print(response as Any)
+        networkInteractor.fetchSites(from: index, pageCount: pageCount, completion: { response in
             assert(response != nil)
             expectation.fulfill()
         }, error: { error in

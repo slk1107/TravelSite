@@ -13,11 +13,11 @@ struct SiteResponse: Codable {
 struct DatalistResponse: Codable {
     var limit: Int
     var offset: Int
-    var count: Int
+    var count: Int?
     var results: [SiteInfo]
 }
 struct SiteInfo: Codable {
-    var info: String
+    var info: String?
     var stitle: String
     var file: String
     var xbody: String
