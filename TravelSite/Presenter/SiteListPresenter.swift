@@ -35,7 +35,7 @@ class SiteListPresenter: SiteListPresenterProtocol {
     
     func willDisplay(index: Int) {
         let currentItemCount = siteList.count
-        if currentItemCount - index < 3 {
+        if currentItemCount - index == 3 {
             fetchSites(from: siteList.count)
         }
     }
