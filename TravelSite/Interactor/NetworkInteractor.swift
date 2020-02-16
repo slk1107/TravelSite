@@ -9,7 +9,17 @@
 import Foundation
 
 class NetworkInteractor {
+    
+    let dispatchQueue = DispatchQueue(label: "fetchSites")
+    
     func fetchSites(from startIndex: Int = 0, pageCount: Int = 10, completion: @escaping (SiteResponse?) -> (), error: ((Error) -> ())? = nil) {
+        let newTask = DispatchWorkItem {[weak self] in
+            self?.startFetchSites(from: startIndex, pageCount: pageCount, completion: completion, error: error)
+        }
+        dispatchQueue.async(execute: newTask)
+    }
+    
+    private func startFetchSites(from startIndex: Int = 0, pageCount: Int = 10, completion: @escaping (SiteResponse?) -> (), error: ((Error) -> ())? = nil) {
 
         let urlComponents = NSURLComponents(string: "https://data.taipei/opendata/datalist/apiAccess")!
         urlComponents.queryItems = [
@@ -29,6 +39,7 @@ class NetworkInteractor {
             
             if let reponseError = reponseError {
                 error?(reponseError)
+                
                 return
             }
             
