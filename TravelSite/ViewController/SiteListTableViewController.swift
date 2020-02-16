@@ -39,8 +39,6 @@ class SiteListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 600
     }
 
     // MARK: - Table view data source
